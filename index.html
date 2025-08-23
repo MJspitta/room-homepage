@@ -13,35 +13,45 @@
     />
 
     <title>Frontend Mentor | Room homepage</title>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <dialog></dialog>
+    <dialog>
+      <div class="close-menu">
+        <img src="./images/icon-close.svg" alt="close menu" />
+      </div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </dialog>
     <header>
       <div class="hero-image-section">
         <nav>
-          <img src="./images/logo.svg" alt="room logo" class="logo" />
+          <div class="hamburger-menu">
+            <img src="./images/icon-hamburger.svg" alt="hamburger icon" />
+          </div>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="room logo" />
+          </div>
           <ul class="menu">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="hero-content-section">
-        <h2>Discover innovative ways to decorate</h2>
-        <p>
-          We provide unmatched quality, comfort, and style for property owners
-          across the country. Our experts combine form and function in bringing
-          your vision to life. Create a room in your own style with our
-          collection and make your property a reflection of you and what you
-          love.
-        </p>
-        <button type="button">
-          <span class="shop-now">Shop now</span>
-          <img src="./images/icon-arrow.svg" alt="arrow icon" />
-        </button>
-        <div class="slide-btns" hidden>
+        <div class="slide-btns">
           <button>
             <img src="./images/icon-angle-left.svg" alt="angle left icon" />
           </button>
@@ -49,6 +59,20 @@
             <img src="./images/icon-angle-right.svg" alt="angle right icon" />
           </button>
         </div>
+      </div>
+      <div class="hero-content-section">
+        <h1>Discover innovative ways to decorate</h1>
+        <p>
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <a href="#">
+          <span class="shop-now">Shop now</span>
+          <img src="./images/icon-arrow.svg" alt="arrow icon" />
+        </a>
       </div>
     </header>
 

@@ -1,0 +1,249 @@
+// Primary colors
+$white: hsl(0, 100%, 100%);
+$grey-500: hsl(0, 0%, 63%);
+$grey-800: hsl(0, 0%, 27%);
+$black: hsl(0, 0%, 0%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+img {
+  display: block;
+}
+
+h1 {
+  font-weight: 700;
+}
+h2,
+a,
+.shop-now {
+  font-weight: 600;
+}
+p {
+  font-weight: 500;
+  color: $grey-500;
+  line-height: 1.5;
+}
+%side-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .hero-image-section {
+    background-image: url("../images/mobile-image-hero-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+  }
+
+  .hero-content-section {
+    @extend %side-padding;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.hero-image-section {
+  nav {
+    @extend %side-padding;
+    display: flex;
+    margin-top: 3rem;
+    justify-content: flex-start;
+
+    .logo {
+      flex: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  .slide-btns {
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+    display: flex;
+
+    button {
+      background-color: $black;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      transition: background-color 0.3s ease-out;
+    }
+
+    button:hover {
+      background-color: $grey-800;
+      cursor: pointer;
+    }
+  }
+}
+
+.hero-content-section {
+  a {
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .shop-now {
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      transition: color 0.3s ease-out;
+    }
+  }
+
+  a:hover {
+    .shop-now {
+      color: $grey-500;
+    }
+    img {
+      opacity: 0.3;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+
+  .main-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .main-content {
+    @extend %side-padding;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 25rem) {
+  body {
+    height: 100vh;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+  header {
+    flex-direction: row;
+    height: 70%;
+
+    .hero-image-section {
+      background-image: url("../images/desktop-image-hero-1.jpg");
+      width: 58%;
+      height: auto;
+    }
+
+    .hero-content-section {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      width: 42%;
+      margin: 0;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  .hero-image-section {
+    nav {
+      margin-top: 2rem;
+      gap: 3rem;
+
+      .hamburger-menu {
+        display: none;
+      }
+
+      .logo {
+        flex: 0;
+      }
+
+      .menu {
+        display: flex;
+        gap: 2rem;
+
+        li {
+          list-style-type: none;
+          display: inline-block;
+          padding-bottom: 0.2rem;
+
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+        }
+        li:hover {
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+
+    .slide-btns {
+      right: -9rem;
+
+      button {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+  }
+
+  .hero-content-section {
+    a {
+      img {
+        width: 2rem;
+      }
+    }
+  }
+
+  main {
+    flex-direction: row;
+    gap: 0;
+
+    .main-content {
+      width: 38.4%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

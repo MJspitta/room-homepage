@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2,
+a,
+.shop-now {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+  line-height: 1.5;
+}
+
+main .main-content, .hero-image-section nav, header .hero-content-section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header .hero-image-section {
+  background-image: url("../images/mobile-image-hero-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: relative;
+}
+header .hero-content-section {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-image-section nav {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: flex-start;
+}
+.hero-image-section nav .logo {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image-section nav .menu {
+  display: none;
+}
+.hero-image-section .slide-btns {
+  position: absolute;
+  right: 0rem;
+  bottom: 0;
+  display: flex;
+}
+.hero-image-section .slide-btns button {
+  background-color: hsl(0, 0%, 0%);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: background-color 0.3s ease-out;
+}
+.hero-image-section .slide-btns button:hover {
+  background-color: hsl(0, 0%, 27%);
+  cursor: pointer;
+}
+
+.hero-content-section a {
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.hero-content-section a .shop-now {
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  transition: color 0.3s ease-out;
+}
+.hero-content-section a:hover .shop-now {
+  color: hsl(0, 0%, 63%);
+}
+.hero-content-section a:hover img {
+  opacity: 0.3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+}
+main .main-image img {
+  width: 100%;
+}
+main .main-content h2 {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 25rem) {
+  body {
+    height: 100vh;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  header {
+    flex-direction: row;
+    height: 70%;
+  }
+  header .hero-image-section {
+    background-image: url("../images/desktop-image-hero-1.jpg");
+    width: 58%;
+    height: auto;
+  }
+  header .hero-content-section {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    width: 42%;
+    margin: 0;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hero-image-section nav {
+    margin-top: 2rem;
+    gap: 3rem;
+  }
+  .hero-image-section nav .hamburger-menu {
+    display: none;
+  }
+  .hero-image-section nav .logo {
+    flex: 0;
+  }
+  .hero-image-section nav .menu {
+    display: flex;
+    gap: 2rem;
+  }
+  .hero-image-section nav .menu li {
+    list-style-type: none;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+  }
+  .hero-image-section nav .menu li a {
+    text-decoration: none;
+    color: hsl(0, 100%, 100%);
+  }
+  .hero-image-section nav .menu li:hover {
+    border-bottom: 1px solid hsl(0, 100%, 100%);
+  }
+  .hero-image-section .slide-btns {
+    right: -9rem;
+  }
+  .hero-image-section .slide-btns button {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .hero-content-section a img {
+    width: 2rem;
+  }
+  main {
+    flex-direction: row;
+    gap: 0;
+  }
+  main .main-content {
+    width: 38.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main .main-content h2 {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
