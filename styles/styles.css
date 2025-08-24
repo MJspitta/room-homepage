@@ -91,6 +91,7 @@ header .hero-image-section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 63%);
   height: 60vh;
   position: relative;
 }
