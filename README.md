@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Room Homepage Solution](https://your-solution-url.com)
+- Live Site URL: [Room Homepage Live Site](https://mjspitta.github.io/room-homepage/)
 
 ## My process
 
