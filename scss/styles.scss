@@ -36,13 +36,62 @@ body {
   scroll-behavior: smooth;
 }
 
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+  border: none;
+  transform: translateY(-100%);
+  transition: transform ease-in-out 1s;
+
+  .close-menu:hover {
+    cursor: pointer;
+  }
+
+  .dialog-menu {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      text-transform: lowercase;
+
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+    li:hover {
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+dialog.show {
+  transform: translateY(0%);
+}
+dialog.hide {
+  transform: translateY(-100%);
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5); /* dimmed background */
+}
+
 header {
   display: flex;
   flex-direction: column;
   width: 100%;
 
   .hero-image-section {
-    background-image: url("../images/mobile-image-hero-1.jpg");
+    // background-image: url("../images/mobile-image-hero-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,6 +114,10 @@ header {
     display: flex;
     margin-top: 3rem;
     justify-content: flex-start;
+
+    .hamburger-menu:hover {
+      cursor: pointer;
+    }
 
     .logo {
       flex: auto;
@@ -153,6 +206,10 @@ main {
     height: 100vh;
   }
 
+  dialog {
+    display: none;
+  }
+
   p {
     font-size: 0.8rem;
   }
@@ -161,7 +218,7 @@ main {
     height: 70%;
 
     .hero-image-section {
-      background-image: url("../images/desktop-image-hero-1.jpg");
+      // background-image: url("../images/desktop-image-hero-1.jpg");
       width: 58%;
       height: auto;
     }
@@ -197,6 +254,7 @@ main {
           list-style-type: none;
           display: inline-block;
           padding-bottom: 0.2rem;
+          text-transform: lowercase;
 
           a {
             text-decoration: none;
@@ -210,11 +268,11 @@ main {
     }
 
     .slide-btns {
-      right: -9rem;
+      right: -9.4rem;
 
       button {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4.7rem;
+        height: 4.7rem;
       }
     }
   }
@@ -230,6 +288,7 @@ main {
   main {
     flex-direction: row;
     gap: 0;
+    justify-content: space-between;
 
     .main-content {
       width: 38.4%;
