@@ -42,7 +42,7 @@ const setFields = () => {
 
   topic.textContent = slide.topic;
   paragraph.textContent = slide.paragraph;
-  heroImage.style.backgroundImage = `url('../images/${isMobile ? "mobile" : "desktop"}-image-hero-${currIndex + 1}.jpg')`;
+  heroImage.style.backgroundImage = `url("../images/${isMobile ? 'mobile' : 'desktop'}-image-hero-${currIndex + 1}.jpg")`;
 };
 
 setFields();
